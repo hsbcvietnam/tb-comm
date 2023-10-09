@@ -1,0 +1,253 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: #FFFFFF;
+}
+
+.header-logo {
+    width: calc(45% - 5vw);
+    position: relative;
+    background-image: url(../image/header.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: stretch;
+}
+
+.header > a {
+    text-align: center;
+    text-decoration: none;
+    color: #21231B;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-right: 1vw;
+    transition: all 0.5s ease;
+}
+
+.header > a:hover {
+    color: rgb(189, 208, 147);
+}
+
+.header > a:last-child {
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid #9DA094;
+    border-radius: 0.5rem;
+}
+
+.header > a:last-child:hover {
+    color: #21231B;
+    background-color: rgb(189, 208, 147);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/banner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 83%;
+    background-image: url(../image/about.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.service {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 59.17%;
+    background-image: url(../image/service.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 145.86%;
+    background-image: url(../image/team.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 10vh;
+}
+
+.project-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: #262A1D;
+}
+
+.project-item-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.project-item-container > * {
+    margin-right: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    color: #262A1D;
+    cursor: pointer;
+}
+
+.project-item-container > *.active {
+    color: #F58820;
+    font-weight: 600;
+}
+
+.project-image {
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding-top: 49.92%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 2rem;
+}
+
+.project-image-mobile {
+    display: none;
+}
+
+.video {
+    position: relative;
+    width: 100%;
+}
+
+.video video {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 39.75%;
+    background-image: url(../image/footer.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -1vh;
+}
+
+@media screen and (max-width: 480px) {
+    .header > a:not(:last-child) {
+        display: none;
+    }
+
+    .banner {
+        background-image: url(../image/banner-mobile.png);
+    }
+
+    .intro {
+        padding-top: 440.35%;
+        background-image: url(../image/about-mobile.png);
+    }
+
+    .service {
+        padding-top: 276.16%;
+        background-image: url(../image/service-mobile.png);
+    }
+
+    .team {
+        padding-top: 651.46%;
+        background-image: url(../image/team-mobile.png);
+    }
+
+    .project-item-container > * {
+        width: 50%;
+        margin-right: 0;
+        padding-right: 5%;
+    }
+
+    .project-item-container > *:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    .project-image {
+        display: none;
+    }
+
+    .project-image-mobile {
+        width: 100%;
+        position: relative;
+        display: unset;
+        height: 0;
+        padding-top: 481.67%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        padding-top: 240.86%;
+        background-image: url(../image/footer-mobile.png);
+    }
+}
